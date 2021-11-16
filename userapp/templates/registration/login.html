@@ -1,20 +1,44 @@
 {% extends 'registration/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
 
 {% block content %}
 {{block.super}}
+<div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div id="login">
+            <div class="log-form">
+                <h1>Login Here</h1>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label for="username">Username: </label>
+                    <br>
+                    <input type="text" name="username" placeholder="Enter Username">
+                    <br>
+                    <br>
+                    <label for="password">Password: </label>
+                    <br>
+                    <input type="password" name="password" placeholder="Enter Password">
+                    <br>
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
 
-<h1>Login</h1>
-<form action="" method="POST">
-    {% csrf_token %}
-    <label for="username">Username: </label>
-    <input type="text" name="username" placeholder="Enter Username"> 
-    <br>
-    <label for ="password">Password: </label>
-    <input type="password" name="password" placeholder="Enter Password"> 
-    <br>
+                    <input type="submit" value="LOGIN" class="btn btn-block btn-info">
+                </form>
+                <p>No account? Register here: <a href="{% url 'register-User' %}">Create New Account</a></p>
 
-    <input type="submit" value="Login"> 
-</form>
-<p>Have an account? If not register here <a href="{% url 'register-User' %}">Create New Account</a></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+
+
 
 {% endblock %}

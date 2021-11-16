@@ -1,0 +1,48 @@
+/* add google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    
+}
+
+
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    
+}
+
+.log-form{
+    background-color: lightgray;
+    max-height: 100%;
+    padding: 2.5em;
+    border-radius: 5px;
+
+}
+
+#login p{
+    font-size: small;
+}
+
+#login p a{
+    font-size: small;
+}
+
+#login input{
+    border-radius: 5px;
+}
+
+#login .btn{
+    padding: 1em 0;
+    font-size: 1rem;
+    margin-top: 1.5em;
+}
