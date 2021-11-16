@@ -10,16 +10,15 @@
         <div id="login">
             <div class="log-form">
                 <h1>Login Here</h1>
-                <form action="" method="POST">
+                <form action="" method="POST" class="form-group">
                     {% csrf_token %}
                     <label for="username">Username: </label>
                     <br>
-                    <input type="text" name="username" placeholder="Enter Username">
-                    <br>
+                    <input type="text" name="username" placeholder="Enter Username" class="form-control">
                     <br>
                     <label for="password">Password: </label>
                     <br>
-                    <input type="password" name="password" placeholder="Enter Password">
+                    <input type="password" name="password" placeholder="Enter Password" class="form-control">
                     <br>
                     {% for message in messages %}
                     {{message}}
