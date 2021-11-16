@@ -12,12 +12,15 @@ def registerUser(request):
     form = RegisterForm()
 
     if request.method =="POST":
-        form = RegisterForm[request.POST]
+        form = RegisterForm(request.POST)
 
         if form.is_valid():
             form.save()
 
             return redirect('loginUser')
+    else:
+        form=RegisterForm()
+        
     title="Create a New User"
     return render(request, "registration/register.html", {"title":title, "form":form})
 
