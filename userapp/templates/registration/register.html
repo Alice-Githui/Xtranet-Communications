@@ -7,16 +7,16 @@
 <form action="" method="POST">
     {% csrf_token %}
 
-    <label for="username">Username</label>
+    <label for="username">Username: </label>
     {{form.username}}
     <br>
-    <label for="email">Email Address</label>
+    <label for="email">Email Address: </label>
     {{form.email}}
     <br>
-    <label for="password1">Password</label>
+    <label for="password1">Password: </label>
     {{form.password1}}
     <br>
-    <label for="password2">Confirm Password</label>
+    <label for="password2">Confirm Password: </label>
     {{form.password2}}
     <br>
 
@@ -36,5 +36,8 @@
     <input type="submit" value="Register">
 
 </form>
+
+<p>Have an account? Login Here <a href="{% url 'loginUser' %}">Login</a></p>
+
 
 {% endblock %}
