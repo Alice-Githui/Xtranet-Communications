@@ -4,13 +4,16 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    return render(request, "app/index.html", {})
+    title = "Homepage"
+    return render(request, "app/index.html", {title: title})
 
 
 def registerUser(request):
-    return render(request, "registration/register.html", {})
+    title="Create a New User"
+    return render(request, "registration/register.html", {"title":title})
 
 
 def loginUser(request):
-    return render(request, "registration/login.html", {})
+    title="Login User"
+    return render(request, "registration/login.html", {"title":title})
 
