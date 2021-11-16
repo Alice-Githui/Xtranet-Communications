@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 # import forms
 from .forms import *
-# import user authentication
+# import django authenticate method
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
@@ -47,4 +47,9 @@ def loginUser(request):
             messages.error(request, "Fill out all the fields")
     title="Login User"
     return render(request, "registration/login.html", {"title":title})
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('loginUser')
 
