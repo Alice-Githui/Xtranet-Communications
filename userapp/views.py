@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # import forms
 from .forms import *
 
@@ -9,8 +9,17 @@ def index(request):
 
 
 def registerUser(request):
+    form = RegisterForm()
+
+    if request.method =="POST":
+        form = RegisterForm[request.POST]
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('loginUser')
     title="Create a New User"
-    return render(request, "registration/register.html", {"title":title})
+    return render(request, "registration/register.html", {"title":title, "form":form})
 
 
 def loginUser(request):

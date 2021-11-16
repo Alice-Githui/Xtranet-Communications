@@ -3,4 +3,26 @@
 {% block content %}
 {{block.super}}
 
+<h1>Register User</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <label for="username">Username</label>
+    {{form.username}}
+    <br>
+    <label for="email">Email Address</label>
+    {{form.email}}
+    <br>
+    <label for="password1">Password</label>
+    {{form.password1}}
+    <br>
+    <label for="password2">Confirm Password</label>
+    {{form.password2}}
+
+    <br>
+
+    <input type="submit" value="Register">
+
+</form>
+
 {% endblock %}
