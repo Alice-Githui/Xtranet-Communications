@@ -16,6 +16,10 @@ This application is screen responsive
 <br>
 -Django framework
 
+## Working Project
+## Registration
+![Registration Form](Images/registration.png)
+
 ## Installation and Set-up
 
 To acquire a local copy:
@@ -26,6 +30,9 @@ To acquire a local copy:
 
 ## Known Bugs
 - None at the moment
+
+## Further Improvements
+- Implement the auto-logout when a session is idle for 30seconds
 
 
 ## License
