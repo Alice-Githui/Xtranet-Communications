@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from .forms import *
 # import django authenticate method
 from django.contrib.auth import authenticate, login, logout
+# import messages
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
