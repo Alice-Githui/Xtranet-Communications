@@ -2,6 +2,9 @@
 
 This project was created by Alice Githui.
 
+## Deployed Link
+[Deployed Application](https://xtranet.herokuapp.com/)
+
 ## Description
 This is a application where a user can register using their name, email and password. After registration, they are re-directed to the login page where they login using their credentials and are redirected to the application's homepage. 
 
@@ -30,9 +33,11 @@ This application is screen responsive
 
 To acquire a local copy:
 
-- Clone the repository to your desired location
-- Open the app on your preferred editor to view the source code
-- Run the app by running python manage.py runserver command to view the app
+- Clone the repository to your desired location/folder
+- Create a virtual environment and activate it to create a mini-environment/system
+- In your terminal, run the command pip install -r requirements.txt to install all the application dependencies 
+- Open the app on your preferred editor i.e Visual Studio Code to view the source code
+- Run the app by running python3 manage.py runserver command to run the application on a local environment
 
 ## Known Bugs
 - None at the moment
