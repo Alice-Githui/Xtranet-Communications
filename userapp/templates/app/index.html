@@ -17,14 +17,24 @@
 </head>
 <body class="homepage-body">
     <div class="container" id="homepage-container">
-        <div class="col-md-2"></div>
+        <div class="row">
+            <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="homepage">
+                {% if user.is_authenticated %}
+                <a href= "{% url 'logout-user' %}"><button class="btn btn-block btn-info">Logout</button></a>
+                {% else %}
+                <a href= "{% url 'loginUser' %}"><button class="btn btn-block btn-info">Back to Login page</button></a>
+                {% endif %}
+                <br>
                 <h2>WELCOME TO MY APPLICATION {{user.username}}</h2>
 
             </div>
         </div>
         <div class="col-md-2"></div>
+
+        </div>
+        
     </div>   
 </body>
 </html>
