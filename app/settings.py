@@ -50,6 +50,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # install middleware for django-sessions
+    # 'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django_session_timeout.middleware.SessionTimeoutMiddleware',
+    # django-auto-logout-middleware
+     'django_auto_logout.middleware.auto_logout'
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -129,3 +134,17 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-sessions
+# SESSION_EXPIRE_SECONDS = 30 
+# SESSION_COOKIE_AGE = 30
+# SESSION_SAVE_EVERY_REQUEST = True
+
+# session to expire after last action
+# SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+# SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 30
+
+# redirect after user is logged out
+# SESSION_TIMEOUT_REDIRECT = 'loginUser'
+
+AUTO_LOGOUT = {'IDLE_TIME': 30} 
