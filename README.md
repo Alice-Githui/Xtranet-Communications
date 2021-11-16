@@ -20,6 +20,12 @@ This application is screen responsive
 ## Registration
 ![Registration Form](Images/registration.png)
 
+## Login Form
+![Login Form](Images/loginpage.png)
+
+## Homepage after Login
+![Homepage after successful login](Images/homepage.png)
+
 ## Installation and Set-up
 
 To acquire a local copy:
